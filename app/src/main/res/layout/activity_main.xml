@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.raonstudio.multilevelcheckbox.MultiLevelCheckBox
+        android:id="@+id/parent_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="전체선택" />
+
+    <com.raonstudio.multilevelcheckbox.MultiLevelCheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:text="옵션1"
+        app:parentCheckBox="@id/parent_checkbox" />
+
+    <com.raonstudio.multilevelcheckbox.MultiLevelCheckBox
+        android:id="@+id/checkbox1_1"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="48dp"
+        android:text="옵션1-1"
+        app:parentCheckBox="@id/checkbox1" />
+
+    <com.raonstudio.multilevelcheckbox.MultiLevelCheckBox
+        android:id="@+id/checkbox1_2"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="48dp"
+        android:text="옵션1-2"
+        app:parentCheckBox="@id/checkbox1" />
+
+    <com.raonstudio.multilevelcheckbox.MultiLevelCheckBox
+        android:id="@+id/checkbox1_2_1"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="72dp"
+        android:text="옵션1-2-1"
+        app:parentCheckBox="@id/checkbox1_2" />
+
+    <com.raonstudio.multilevelcheckbox.MultiLevelCheckBox
+        android:id="@+id/checkbox1_2_2"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="72dp"
+        android:text="옵션1-2-2"
+        app:parentCheckBox="@id/checkbox1_2" />
+
+    <com.raonstudio.multilevelcheckbox.MultiLevelCheckBox
+        android:id="@+id/checkbox1_3"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="48dp"
+        android:text="옵션1-3"
+        app:parentCheckBox="@id/checkbox1" />
+
+    <com.raonstudio.multilevelcheckbox.MultiLevelCheckBox
+        android:id="@+id/checkbox2"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:text="옵션2"
+        app:parentCheckBox="@id/parent_checkbox" />
+
+    <com.raonstudio.multilevelcheckbox.MultiLevelCheckBox
+        android:id="@+id/checkbox2_1"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="48dp"
+        android:text="옵션2-1"
+        app:parentCheckBox="@id/checkbox2" />
+
+    <com.raonstudio.multilevelcheckbox.MultiLevelCheckBox
+        android:id="@+id/checkbox2_2"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="48dp"
+        android:text="옵션2-2"
+        app:parentCheckBox="@id/checkbox2" />
+
+    <com.raonstudio.multilevelcheckbox.MultiLevelCheckBox
+        android:id="@+id/checkbox3"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:text="옵션3"
+        app:parentCheckBox="@id/parent_checkbox" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

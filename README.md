@@ -27,8 +27,9 @@
     android:text="옵션2"
     app:parentCheckBox="@id/parent_checkbox" />
 ```
+add parentCheckBox property in xml with MultiLevelCheckBox
 
-### How To Use
+### How To Import
 Add 2 files
 1. values/attrs.xml
 2. MultiLevelCheckBox.kt to any package

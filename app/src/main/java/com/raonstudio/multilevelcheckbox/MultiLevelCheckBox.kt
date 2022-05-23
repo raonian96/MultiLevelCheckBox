@@ -8,6 +8,7 @@ import com.google.android.material.checkbox.MaterialCheckBox
 class MultiLevelCheckBox(context: Context, attributeSet: AttributeSet) :
     MaterialCheckBox(context, attributeSet) {
     private val parentId: Int
+    private val optional: Boolean
     private val parentCheckBox get() = rootView.findViewById<MultiLevelCheckBox>(parentId)
 
     private val checkedChildrenId = mutableListOf<Int>()
@@ -20,11 +21,27 @@ class MultiLevelCheckBox(context: Context, attributeSet: AttributeSet) :
         ).apply {
             try {
                 parentId = getResourceId(R.styleable.MultiLevelCheckBox_parentCheckBox, -1)
+                optional = getBoolean(R.styleable.MultiLevelCheckBox_optional, false)
             } finally {
                 recycle()
             }
         }
     }
+
+    val isValid: Boolean
+        get() {
+            if (isChecked) return true
+            else if (!isChecked && optional) return true
+            else if (childrenCheckBox.isEmpty()) return false
+            var isChildrenValid = true
+            for (child in childrenCheckBox) {
+                if (!child.isValid) {
+                    isChildrenValid = false
+                    break
+                }
+            }
+            return isChildrenValid
+        }
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
